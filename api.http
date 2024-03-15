@@ -9,18 +9,26 @@ Content-Type: application/json
   "token": "ed999c4e-4132-4114-84e5-b8bc1ef4add6"
 }
 
-### Register  
-POST http://localhost:3000/api/users/
+### Users PRODUCCTION
+GET https://api-auth-test-dev-znrr.3.us-1.fl0.io/api/users
 Content-Type: application/json
 
 {
-    "username": "Lala",
-    "mail": "usuario1@example.com",
-    "password": "otaku"
-  }
+  "token": "ed999c4e-4132-4114-84e5-b8bc1ef4add6"
+}
+
+### Register  
+POST https://api-auth-test-dev-znrr.3.us-1.fl0.io/api/users
+Content-Type: application/json
+
+{
+  "username": "Lolo",
+  "mail": "Lolo@example.com",
+  "password": "prueba"
+}
 
 ### Login  
-POST http://localhost:3000/api/users/login
+POST https://api-auth-test-dev-znrr.3.us-1.fl0.io/api/users/login
 Content-Type: application/json
 
 {

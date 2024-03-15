@@ -1,6 +1,7 @@
 import users from "../database/users.json";
 import { writeFile } from "jsonfile";
 import crypto from "node:crypto";
+import { dirname } from "../database";
 
 abstract class UserModel {
   // Como realizamos las tareas de buscar un usuario y de guardar en la base de datos varias veces, separamos la lógica en métodos privados aparte. Privados para que sólo sean accesibles dentro del contexto de esta clase UserModel y no desde el exterior, ya que no es necesario.
@@ -10,7 +11,7 @@ abstract class UserModel {
   }
 
   private static async writeDB() {
-    return writeFile("./src/database/users.json", users);
+    return writeFile(dirname + "/users.json", users);
   }
 
   static async checkToken(token: string) {
